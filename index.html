@@ -8,8 +8,7 @@
    <link rel="stylesheet" href="styles.css">
 
 
-   <!--
-     Bootstrap
+  <!--Bootstrap-->
    <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/darkly/bootstrap.min.css"
@@ -24,38 +23,39 @@
     crossorigin="anonymous"
   ></script> 
     
-  -->
-
+  <!--Graficas-->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
    
-  <div class="titulo">
+  <h1 class="titulo m-auto vw-75 text-center pb-5vw py-3">
     Consulta horas gimnasio
-  </div>
+  </h1>
 
-  <div class="texto">
+  <h3 class="texto d-inline-block mx-auto text-center ">
     Filtros:
+  </h3>
+
+  <div class="block-center d-flex flex-row justify-content-around px-5">
+    <button id="dias" class="btn btn-outline-warning p-51 ">
+      Dias
+    </button>
+
+    <button id="horas" class="btn btn-outline-warning p-51">
+      Horas
+    </button>
+
+    <button id="meses" class="btn btn-outline-warning p-51">
+      Meses
+    </button>
   </div>
 
-  <button id="dias" class="boton">
-    Dias
-  </button>
-
-  <button id="horas" class="boton">
-    Horas
-  </button>
-
-  <button id="meses" class="boton">
-    Meses
-  </button>
-
-  <div class="contenido-principal">
-    <canvas id="myChart" width="400" height="400"></canvas>
+  <div class="bg-light rounded">
+    <canvas id="myChart" width="100" height="100"></canvas>
   </div>
 
-  <div class="texto-explicativo">
+  <div class="texto-explicativo card text-white bg-danger mb-3 text-center p-2 justify-content-around">
     En este cuadro de texto se explican los datos.
   </div>
   

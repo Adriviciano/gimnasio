@@ -21,7 +21,7 @@ const data = {
       label: '',
       backgroundColor: 'red',
       borderColor: 'black',
-      data: [0, 10, 15, 10, 0, 5, 10, 15, 20, 25, 10, 30],
+      data: [0, 5, 10, 15, 0, 10, 15, 10, 20, 25, 10, 30],
    }]
 };
 
@@ -52,11 +52,13 @@ const myChart = new Chart(
 dias.onclick = function(){
    if (filtroDias === false){   
       filtroDias = true;
-      dias.style.backgroundColor="cyan";
+      dias.classList.remove('btn-outline-warning');
+      dias.classList.add('btn-outline-success');
       console.log('Filtro de dias activado'); 
    } else {
       filtroDias = false;
-      dias.style.backgroundColor="blueviolet";
+      dias.classList.remove('btn-outline-success');
+      dias.classList.add('btn-outline-warning');
       console.log('Filtro de dias desactivado'); 
    }
 }
@@ -64,11 +66,13 @@ dias.onclick = function(){
 meses.onclick = function(){
    if (filtroMeses === false){   
       filtroMeses = true;
-      meses.style.backgroundColor="cyan";
+      meses.classList.remove('btn-outline-warning');
+      meses.classList.add('btn-outline-success');
       console.log('Filtro de meses activado'); 
    } else {
       filtroMeses = false;
-      meses.style.backgroundColor="blueviolet";
+      meses.classList.remove('btn-outline-success');
+      meses.classList.add('btn-outline-warning');
       console.log('Filtro de meses desactivado'); 
    }
 }
@@ -76,11 +80,16 @@ meses.onclick = function(){
 horas.onclick = function(){
    if (filtroHoras === false){   
       filtroHoras = true;
-      horas.style.backgroundColor="cyan";
+      horas.classList.remove('btn-outline-warning');
+      horas.classList.add('btn-outline-success');
       console.log('Filtro de horas activado'); 
    } else {
       filtroHoras = false;
-      horas.style.backgroundColor="blueviolet";
+      horas.classList.remove('btn-outline-success');
+      horas.classList.add('btn-outline-warning');
       console.log('Filtro de horas desactivado'); 
    }
+}
+document.getElementsByClassName('texto')[0].onclick = function(){
+   console.clear();
 }
